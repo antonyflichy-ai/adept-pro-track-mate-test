@@ -76,7 +76,7 @@ Deno.serve(async (req) => {
 
     if (existingPending) throw new Error('Une invitation est déjà en attente pour cette adresse.')
 
-    const redirectTo = `${url.replace(/\/$/, '')}/functions/v1/complete-invitation`
+    const redirectTo = 'https://antonyflichy-ai.github.io/adept-pro-track-mate-test/complete-invitation.html'
     const { data: invited, error: inviteError } = await adminClient.auth.admin.inviteUserByEmail(email, {
       redirectTo,
       data: { invited_role: role, invited_agency: agency },
